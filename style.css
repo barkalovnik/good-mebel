@@ -1,0 +1,333 @@
+/* ==========================================================================
+   GOOD MEBEL — Dribbble "APJ Furniture" Style (by Kristof Eka)
+   Palette: Warm Oat/Sand (#FAF7F2, #F3ECE2), Warm Amber (#F5A84B, #E69532),
+            Deep Slate (#1E252B), Muted Taupe (#7A756D), Pure White (#FFFFFF)
+   Typography: Plus Jakarta Sans / Inter
+   ========================================================================== */
+
+:root {
+  --bg-page: #faf7f2;
+  --bg-card: #ffffff;
+  --bg-subtle: #f3ece2;
+  --accent-amber: #f5a84b;
+  --accent-amber-hover: #e69532;
+  --text-dark: #1e252b;
+  --text-muted: #7a756d;
+  --border-light: #e8ded1;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --radius-full: 9999px;
+  --shadow-card: 0 10px 30px rgba(30, 37, 43, 0.05);
+  --transition: all 0.25s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.lucide-icon {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+  stroke: currentColor;
+  fill: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Header */
+.site-header {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-light);
+  background: var(--bg-page);
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.brand-wrap span.amber {
+  color: var(--accent-amber);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--text-dark);
+}
+
+.btn-amber-pill {
+  background: var(--accent-amber);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 12px 26px;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(245, 168, 75, 0.35);
+  transition: var(--transition);
+}
+
+.btn-amber-pill:hover {
+  background: var(--accent-amber-hover);
+  transform: translateY(-2px);
+}
+
+/* Hero Section (APJ Furniture Style) */
+.hero-section {
+  padding: 70px 0 90px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+
+.hero-title span.amber {
+  color: var(--accent-amber);
+}
+
+.hero-desc {
+  font-size: 1.12rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 36px;
+  max-width: 500px;
+}
+
+.hero-media-card {
+  position: relative;
+  background: #e2d7c5;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  height: 500px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.hero-floating-glass {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  max-width: 280px;
+}
+
+/* Categories Section */
+.categories-section {
+  padding: 90px 0;
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.cats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cat-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(30, 37, 43, 0.08);
+}
+
+.cat-img-box {
+  height: 220px;
+  background: #e5ded3;
+  overflow: hidden;
+}
+
+.cat-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cat-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cat-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.cat-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.cat-price {
+  font-size: 0.85rem;
+  color: #b46b14;
+  font-style: italic;
+  padding: 6px 12px;
+  background: rgba(245, 168, 75, 0.1);
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+/* Booking & Location */
+.booking-section {
+  padding: 90px 0;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.form-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-card);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-light);
+  background: var(--bg-page);
+  font-size: 0.95rem;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-amber);
+}
+
+/* Footer */
+.site-footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--border-light);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 992px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .cats-grid { grid-template-columns: 1fr 1fr; }
+  .booking-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 2.8rem; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hero-title { font-size: 2.3rem; }
+  .cats-grid { grid-template-columns: 1fr; }
+}
