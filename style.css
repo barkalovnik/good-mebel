@@ -2,6 +2,7 @@
    GOOD MEBEL — Dribbble "APJ Furniture" Style (by Kristof Eka)
    Palette: Warm Oat/Sand (#FAF7F2, #F3ECE2), Warm Amber (#F5A84B, #E69532),
             Deep Slate (#1E252B), Muted Taupe (#7A756D), Pure White (#FFFFFF)
+            Kaspi Accent (#F14635)
    Typography: Plus Jakarta Sans / Inter
    ========================================================================== */
 
@@ -11,6 +12,8 @@
   --bg-subtle: #f3ece2;
   --accent-amber: #f5a84b;
   --accent-amber-hover: #e69532;
+  --kaspi-red: #f14635;
+  --kaspi-red-hover: #dc2626;
   --text-dark: #1e252b;
   --text-muted: #7a756d;
   --border-light: #e8ded1;
@@ -20,6 +23,7 @@
   --radius-xl: 36px;
   --radius-full: 9999px;
   --shadow-card: 0 10px 30px rgba(30, 37, 43, 0.05);
+  --shadow-hover: 0 18px 40px rgba(30, 37, 43, 0.1);
   --transition: all 0.25s ease;
 }
 
@@ -44,8 +48,8 @@ body {
 }
 
 .lucide-icon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   stroke-width: 2;
   stroke: currentColor;
   fill: none;
@@ -58,6 +62,10 @@ body {
   padding: 24px 0;
   border-bottom: 1px solid var(--border-light);
   background: var(--bg-page);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
 }
 
 .nav-row {
@@ -119,9 +127,10 @@ body {
 .btn-amber-pill:hover {
   background: var(--accent-amber-hover);
   transform: translateY(-2px);
+  color: #fff;
 }
 
-/* Hero Section (APJ Furniture Style) */
+/* Hero Section */
 .hero-section {
   padding: 70px 0 90px;
 }
@@ -134,7 +143,7 @@ body {
 }
 
 .hero-title {
-  font-size: 3.6rem;
+  font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.12;
   letter-spacing: -0.03em;
@@ -151,6 +160,61 @@ body {
   line-height: 1.6;
   margin-bottom: 36px;
   max-width: 500px;
+}
+
+.hero-actions-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.btn-phone-outline {
+  background: transparent;
+  color: var(--text-dark);
+  border: 1px solid var(--border-light);
+  box-shadow: none;
+}
+
+.btn-phone-outline:hover {
+  background: var(--bg-card);
+  color: var(--text-dark);
+}
+
+.hero-stats-row {
+  display: flex;
+  gap: 36px;
+  border-top: 1px solid var(--border-light);
+  padding-top: 24px;
+}
+
+.stat-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.stat-kaspi-link:hover .stat-val {
+  text-decoration: underline;
+}
+
+.stat-val {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.stat-val.amber {
+  color: var(--accent-amber);
+}
+
+.stat-val.kaspi-red {
+  color: var(--kaspi-red);
+}
+
+.stat-lbl {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .hero-media-card {
@@ -173,7 +237,7 @@ body {
   position: absolute;
   top: 30px;
   left: 30px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   padding: 16px 24px;
   border-radius: var(--radius-md);
@@ -181,8 +245,10 @@ body {
   max-width: 280px;
 }
 
-/* Categories Section */
-.categories-section {
+/* ==========================================================================
+   PORTFOLIO CATALOG SECTION & DUAL FILTERS
+   ========================================================================== */
+.portfolio-section {
   padding: 90px 0;
   background: var(--bg-subtle);
   border-top: 1px solid var(--border-light);
@@ -191,7 +257,7 @@ body {
 
 .section-head {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .section-h2 {
@@ -200,13 +266,70 @@ body {
   letter-spacing: -0.02em;
 }
 
-.cats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+.portfolio-filters-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px 30px;
+  margin-bottom: 40px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
-.cat-card {
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-group-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  min-width: 140px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--bg-page);
+  border: 1px solid var(--border-light);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  border-color: var(--accent-amber);
+  color: var(--text-dark);
+}
+
+.filter-btn.active {
+  background: var(--text-dark);
+  border-color: var(--text-dark);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(30, 37, 43, 0.2);
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.portfolio-card {
   background: var(--bg-card);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -217,24 +340,59 @@ body {
   flex-direction: column;
 }
 
-.cat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 35px rgba(30, 37, 43, 0.08);
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
 }
 
-.cat-img-box {
-  height: 220px;
+.port-img-box {
+  position: relative;
+  height: 240px;
   background: #e5ded3;
   overflow: hidden;
 }
 
-.cat-img {
+.port-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
-.cat-body {
+.portfolio-card:hover .port-img {
+  transform: scale(1.05);
+}
+
+.port-badges {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: flex;
+  gap: 8px;
+}
+
+.port-badge-style,
+.port-badge-type {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.port-badge-style {
+  background: rgba(30, 37, 43, 0.85);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+
+.port-badge-type {
+  background: rgba(245, 168, 75, 0.95);
+  color: #fff;
+}
+
+.port-body {
   padding: 24px;
   flex: 1;
   display: flex;
@@ -242,30 +400,327 @@ body {
   justify-content: space-between;
 }
 
-.cat-title {
-  font-size: 1.25rem;
+.port-title {
+  font-size: 1.3rem;
   font-weight: 800;
   margin-bottom: 8px;
 }
 
-.cat-desc {
+.port-desc {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 16px;
   line-height: 1.5;
 }
 
-.cat-price {
-  font-size: 0.85rem;
-  color: #b46b14;
-  font-style: italic;
-  padding: 6px 12px;
-  background: rgba(245, 168, 75, 0.1);
+.port-specs {
+  background: var(--bg-page);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  font-size: 0.82rem;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.port-pricing {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.port-price-est {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.port-kaspi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.kaspi-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--kaspi-red);
+}
+
+.kaspi-payment {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #991b1b;
+}
+
+.btn-select-project {
+  width: 100%;
+  justify-content: center;
+  font-size: 0.88rem;
+  padding: 10px 18px;
+}
+
+/* ==========================================================================
+   KASPI INSTALLMENT CALCULATOR SECTION
+   ========================================================================== */
+.kaspi-section {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.kaspi-wrapper {
+  background: linear-gradient(135deg, #fff9f8 0%, #fff4f2 100%);
+  border: 2px solid #fee2e2;
+  border-radius: var(--radius-xl);
+  padding: 50px;
+  box-shadow: 0 15px 45px rgba(241, 70, 53, 0.08);
+}
+
+.kaspi-header-row {
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kaspi-brand-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.kaspi-logo-badge {
+  background: var(--kaspi-red);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 900;
+  padding: 4px 14px;
+  border-radius: var(--radius-sm);
+  letter-spacing: -0.5px;
+}
+
+.kaspi-promo-badge {
+  background: #fff;
+  border: 1px solid var(--kaspi-red);
+  color: var(--kaspi-red);
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+}
+
+.kaspi-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.kaspi-subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.kaspi-calc-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.kaspi-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.calc-control-group {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid #fed7d7;
+  box-shadow: var(--shadow-card);
+}
+
+.calc-control-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 16px;
 }
 
-/* Booking & Location */
+.calc-label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}
+
+.calc-amount-display {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--kaspi-red);
+}
+
+.calc-range-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #fee2e2;
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.calc-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--kaspi-red);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(241, 70, 53, 0.4);
+  transition: transform 0.15s ease;
+}
+
+.calc-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+.calc-range-bounds {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.kaspi-terms-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.term-btn {
+  background: var(--bg-page);
+  border: 1px solid #fed7d7;
+  color: var(--text-dark);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 12px 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  text-align: center;
+}
+
+.term-btn:hover {
+  border-color: var(--kaspi-red);
+}
+
+.term-btn.active {
+  background: var(--kaspi-red);
+  color: #fff;
+  border-color: var(--kaspi-red);
+  box-shadow: 0 4px 14px rgba(241, 70, 53, 0.3);
+}
+
+.term-star-tag {
+  position: absolute;
+  top: -8px;
+  right: -4px;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 2px 6px;
+  border-radius: var(--radius-full);
+}
+
+.kaspi-summary-box {
+  background: #ffffff;
+  border: 2px solid #fecaca;
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-line-sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.summary-payment-large {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--kaspi-red);
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.summary-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #fee2e2;
+  border-bottom: 1px solid #fee2e2;
+  padding: 16px 0;
+  margin-bottom: 24px;
+  font-size: 0.9rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-row span {
+  color: var(--text-muted);
+}
+
+.summary-row strong {
+  color: var(--text-dark);
+}
+
+.summary-row strong.text-green {
+  color: #15803d;
+}
+
+.btn-apply-kaspi {
+  background: var(--kaspi-red);
+  box-shadow: 0 4px 16px rgba(241, 70, 53, 0.35);
+  justify-content: center;
+  font-size: 0.95rem;
+}
+
+.btn-apply-kaspi:hover {
+  background: var(--kaspi-red-hover);
+}
+
+/* ==========================================================================
+   BOOKING & LOCATION SECTION
+   ========================================================================== */
 .booking-section {
   padding: 90px 0;
 }
@@ -278,11 +733,30 @@ body {
 }
 
 .form-box {
+  position: relative;
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   padding: 40px;
   box-shadow: var(--shadow-card);
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.form-box.highlighted {
+  border-color: var(--accent-amber);
+  box-shadow: 0 0 0 4px rgba(245, 168, 75, 0.25), 0 20px 45px rgba(245, 168, 75, 0.15);
+}
+
+.form-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: #fef3c7;
+  color: #b45309;
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
 }
 
 .form-group {
@@ -304,11 +778,15 @@ body {
   border: 1px solid var(--border-light);
   background: var(--bg-page);
   font-size: 0.95rem;
+  font-family: inherit;
+  transition: var(--transition);
 }
 
 .form-control:focus {
   outline: none;
   border-color: var(--accent-amber);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(245, 168, 75, 0.15);
 }
 
 /* Footer */
@@ -317,17 +795,24 @@ body {
   border-top: 1px solid var(--border-light);
   color: var(--text-muted);
   font-size: 0.88rem;
+  background: var(--bg-page);
 }
 
+/* Responsive */
 @media (max-width: 992px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .cats-grid { grid-template-columns: 1fr 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; }
+  .kaspi-calc-grid { grid-template-columns: 1fr; }
   .booking-grid { grid-template-columns: 1fr; }
   .hero-title { font-size: 2.8rem; }
+  .kaspi-wrapper { padding: 30px 20px; }
 }
 
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .hero-title { font-size: 2.3rem; }
-  .cats-grid { grid-template-columns: 1fr; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .portfolio-filters-wrap { padding: 18px; }
+  .filter-group { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .kaspi-terms-row { grid-template-columns: 1fr 1fr; }
 }

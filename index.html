@@ -43,14 +43,14 @@
       </a>
 
       <ul class="nav-links">
-        <li><a href="#catalog">Каталог</a></li>
-        <li><a href="#advantages">Преимущества</a></li>
+        <li><a href="#portfolio">Каталог проектов</a></li>
+        <li><a href="#kaspi">Рассрочка Kaspi</a></li>
         <li><a href="#booking">3D-проект</a></li>
-        <li><a href="#contacts">Контакты</a></li>
+        <li><a href="#contacts">Шоурум</a></li>
       </ul>
 
-      <a href="#booking" class="btn-amber-pill">
-        <span>Рассчитать стоимость</span>
+      <a href="#booking" class="btn-amber-pill btn-cta-3d">
+        <span>Бесплатный 3D-проект</span>
         <svg class="lucide-icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
       </a>
     </div>
@@ -66,32 +66,32 @@
           </h1>
 
           <p class="hero-desc">
-            Эргономичные кухни, продуманные гардеробные и встроенные шкафы-купе от производителя в Усть-Каменогорске. Европейские материалы Egger и фурнитура с пожизненной гарантией.
+            Эргономичные кухни, продуманные гардеробные и встроенные шкафы-купе от производителя в Усть-Каменогорске. Европейские материалы Egger и фурнитура с гарантией.
           </p>
 
-          <div style="display: flex; gap: 16px; margin-bottom: 40px;">
-            <a href="#booking" class="btn-amber-pill">
-              <span>Бесплатный 3D-проект</span>
+          <div class="hero-actions-row">
+            <a href="#booking" class="btn-amber-pill btn-hero-3d">
+              <span>Заказать бесплатный 3D-проект</span>
               <svg class="lucide-icon" viewBox="0 0 24 24" style="width: 16px; height: 16px;"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
             </a>
-            <a href="tel:+77764589999" class="btn-amber-pill" style="background: transparent; color: var(--text-dark); border: 1px solid var(--border-light); box-shadow: none;">
+            <a href="tel:+77764589999" class="btn-amber-pill btn-phone-outline">
               <span>+7 (776) 458-99-99</span>
             </a>
           </div>
 
-          <div style="display: flex; gap: 36px; border-top: 1px solid var(--border-light); padding-top: 24px;">
-            <div>
-              <div style="font-size: 1.8rem; font-weight: 900; color: var(--accent-amber);">4.9 </div>
-              <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Рейтинг 2ГИС</div>
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <div class="stat-val amber">4.9</div>
+              <div class="stat-lbl">Рейтинг 2ГИС</div>
             </div>
-            <div>
-              <div style="font-size: 1.8rem; font-weight: 900;">24 часа</div>
-              <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Срок 3D-дизайна</div>
+            <div class="stat-item">
+              <div class="stat-val">24 часа</div>
+              <div class="stat-lbl">Срок 3D-дизайна</div>
             </div>
-            <div>
-              <div style="font-size: 1.8rem; font-weight: 900;">0-0-12</div>
-              <div style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Kaspi Рассрочка</div>
-            </div>
+            <a href="#kaspi" class="stat-item stat-kaspi-link">
+              <div class="stat-val kaspi-red">0-0-12</div>
+              <div class="stat-lbl">Kaspi Рассрочка</div>
+            </a>
           </div>
         </div>
 
@@ -106,66 +106,384 @@
     </div>
   </section>
 
-  <!-- Categories Section -->
-  <section class="categories-section" id="catalog">
+  <!-- Unified Portfolio Catalog with Dual Filters -->
+  <section class="portfolio-section" id="portfolio">
     <div class="container">
       <div class="section-head">
-        <h2 class="section-h2">Каталог мебели под заказ</h2>
-        <p style="color: var(--text-muted); margin-top: 8px;">Индивидуальное изготовление по вашим точным размерам за 20–30 рабочих дней</p>
+        <h2 class="section-h2">Каталог реализованных гарнитуров</h2>
+        <p style="color: var(--text-muted); margin-top: 8px;">Выберите тип мебели и интерьерный стиль, чтобы увидеть реальные проекты с описанием материалов и расчетом в Kaspi</p>
       </div>
 
-      <div class="cats-grid">
-        <div class="cat-card">
-          <div class="cat-img-box">
-            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80" alt="Кухни на заказ" class="cat-img">
-          </div>
-          <div class="cat-body">
-            <h3 class="cat-title">Кухни на заказ</h3>
-            <p class="cat-desc">Прямые, угловые и П-образные кухни с профилями Gola, скрытыми ручками и влагостойкими столешницами.</p>
-            <div class="cat-price">Стоимость: [ЗАПОЛНИТЬ: цена кухни за пог.м]</div>
-            <a href="#booking" class="btn-amber-pill" style="padding: 10px 18px; font-size: 0.85rem; justify-content: center;">Заказать замер</a>
-          </div>
-        </div>
-
-        <div class="cat-card">
-          <div class="cat-img-box">
-            <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Шкафы-купе" class="cat-img">
-          </div>
-          <div class="cat-body">
-            <h3 class="cat-title">Встроенные шкафы-купе</h3>
-            <p class="cat-desc">Бесшумные раздвижные системы, точная подгонка под геометрию ниш и потолка, продуманное наполнение полок.</p>
-            <div class="cat-price">Стоимость: [ЗАПОЛНИТЬ: цена шкафа-купе]</div>
-            <a href="#booking" class="btn-amber-pill" style="padding: 10px 18px; font-size: 0.85rem; justify-content: center;">Заказать замер</a>
+      <!-- Filters Wrapper -->
+      <div class="portfolio-filters-wrap">
+        <!-- Filter Row 1: Furniture Type -->
+        <div class="filter-group">
+          <span class="filter-group-label">Тип мебели:</span>
+          <div class="filter-buttons" id="typeFilters">
+            <button class="filter-btn active" data-type="all">Все проекты</button>
+            <button class="filter-btn" data-type="kitchen">Кухонные гарнитуры</button>
+            <button class="filter-btn" data-type="wardrobe">Встроенные шкафы</button>
+            <button class="filter-btn" data-type="dressing">Гардеробные комнаты</button>
           </div>
         </div>
 
-        <div class="cat-card">
-          <div class="cat-img-box">
-            <img src="https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=800&q=80" alt="Гардеробные комнаты" class="cat-img">
+        <!-- Filter Row 2: Style -->
+        <div class="filter-group">
+          <span class="filter-group-label">Стиль интерьера:</span>
+          <div class="filter-buttons" id="styleFilters">
+            <button class="filter-btn active" data-style="all">Все стили</button>
+            <button class="filter-btn" data-style="loft">Лофт</button>
+            <button class="filter-btn" data-style="neoclassic">Неоклассика</button>
+            <button class="filter-btn" data-style="minimalism">Минимализм</button>
           </div>
-          <div class="cat-body">
-            <h3 class="cat-title">Гардеробные комнаты</h3>
-            <p class="cat-desc">Системы хранения вещей с интегрированной LED-подсветкой, выдвижными брючницами и обувницами.</p>
-            <div class="cat-price">Стоимость: [ЗАПОЛНИТЬ: цена гардеробной]</div>
-            <a href="#booking" class="btn-amber-pill" style="padding: 10px 18px; font-size: 0.85rem; justify-content: center;">Заказать замер</a>
+        </div>
+      </div>
+
+      <!-- Portfolio Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- Project 1: Kitchen Loft -->
+        <div class="portfolio-card" data-type="kitchen" data-style="loft">
+          <div class="port-img-box">
+            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=800&q=80" alt="Кухня Graphite Loft" class="port-img">
+            <div class="port-badges">
+              <span class="port-badge-style">Лофт</span>
+              <span class="port-badge-type">Кухня</span>
+            </div>
+          </div>
+          <div class="port-body">
+            <h3 class="port-title">Кухня «Graphite Loft»</h3>
+            <p class="port-desc">Матовые фасады с текстурой обожженного дуба, черные металлические профили Gola и влагостойкая столешница под темный сланец.</p>
+            <div class="port-specs">
+              <div class="spec-line"><strong>Материалы:</strong> МДФ Egger, профили Gola Black</div>
+              <div class="spec-line"><strong>Фурнитура:</strong> Blum Tip-On с доводчиками</div>
+              <div class="spec-line"><strong>Размер:</strong> 3.4 пог. м</div>
+            </div>
+            <div class="port-pricing">
+              <div class="port-price-est">Стоимость: от 680 000 ₸</div>
+              <div class="port-kaspi-badge">
+                <span class="kaspi-tag">Kaspi 0-0-12</span>
+                <span class="kaspi-payment">от 56 660 ₸/мес</span>
+              </div>
+            </div>
+            <button class="btn-amber-pill btn-select-project" data-project="Кухня Graphite Loft">
+              <span>Заказать расчет этого проекта</span>
+              <svg class="lucide-icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2: Kitchen Neoclassic -->
+        <div class="portfolio-card" data-type="kitchen" data-style="neoclassic">
+          <div class="port-img-box">
+            <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80" alt="Кухня Chantilly Classic" class="port-img">
+            <div class="port-badges">
+              <span class="port-badge-style">Неоклассика</span>
+              <span class="port-badge-type">Кухня</span>
+            </div>
+          </div>
+          <div class="port-body">
+            <h3 class="port-title">Кухня «Chantilly Classic»</h3>
+            <p class="port-desc">Утонченная фрезеровка фасадов, ручки из шлифованной латуни, витрины с фацетным стеклом и столешница из акрилового камня.</p>
+            <div class="port-specs">
+              <div class="spec-line"><strong>Материалы:</strong> МДФ в матовой эмали (Италия)</div>
+              <div class="spec-line"><strong>Фурнитура:</strong> Hettich Sensys с демпфированием</div>
+              <div class="spec-line"><strong>Размер:</strong> 3.8 пог. м</div>
+            </div>
+            <div class="port-pricing">
+              <div class="port-price-est">Стоимость: от 820 000 ₸</div>
+              <div class="port-kaspi-badge">
+                <span class="kaspi-tag">Kaspi 0-0-12</span>
+                <span class="kaspi-payment">от 68 330 ₸/мес</span>
+              </div>
+            </div>
+            <button class="btn-amber-pill btn-select-project" data-project="Кухня Chantilly Classic">
+              <span>Заказать расчет этого проекта</span>
+              <svg class="lucide-icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3: Kitchen Minimalism -->
+        <div class="portfolio-card" data-type="kitchen" data-style="minimalism">
+          <div class="port-img-box">
+            <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=800&q=80" alt="Кухня Pure Sense" class="port-img">
+            <div class="port-badges">
+              <span class="port-badge-style">Минимализм</span>
+              <span class="port-badge-type">Кухня</span>
+            </div>
+          </div>
+          <div class="port-body">
+            <h3 class="port-title">Кухня «Pure Sense»</h3>
+            <p class="port-desc">Бесшовный монохромный дизайн без ручек, фасады Soft-Touch с защитой от отпечатков пальцев и скрытая зона мойки.</p>
+            <div class="port-specs">
+              <div class="spec-line"><strong>Материалы:</strong> Суперматовый пластик Fenix / Egger</div>
+              <div class="spec-line"><strong>Фурнитура:</strong> Электроприводы Blum Servo-Drive</div>
+              <div class="spec-line"><strong>Размер:</strong> 3.0 пог. м</div>
+            </div>
+            <div class="port-pricing">
+              <div class="port-price-est">Стоимость: от 590 000 ₸</div>
+              <div class="port-kaspi-badge">
+                <span class="kaspi-tag">Kaspi 0-0-12</span>
+                <span class="kaspi-payment">от 49 160 ₸/мес</span>
+              </div>
+            </div>
+            <button class="btn-amber-pill btn-select-project" data-project="Кухня Pure Sense">
+              <span>Заказать расчет этого проекта</span>
+              <svg class="lucide-icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 4: Wardrobe Minimalism -->
+        <div class="portfolio-card" data-type="wardrobe" data-style="minimalism">
+          <div class="port-img-box">
+            <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=800&q=80" alt="Шкаф-купе Nordic Wood" class="port-img">
+            <div class="port-badges">
+              <span class="port-badge-style">Минимализм</span>
+              <span class="port-badge-type">Шкаф</span>
+            </div>
+          </div>
+          <div class="port-body">
+            <h3 class="port-title">Встроенный шкаф «Nordic Wood»</h3>
+            <p class="port-desc">Точная подгонка в нишу от пола до потолка, скрытые петли плавного хода, выдвижные ящики с органайзерами для аксессуаров.</p>
+            <div class="port-specs">
+              <div class="spec-line"><strong>Материалы:</strong> ЛДСП Egger Австрия 18 мм</div>
+              <div class="spec-line"><strong>Наполнение:</strong> Направляющие скрытого монтажа</div>
+              <div class="spec-line"><strong>Размер:</strong> 2.4 x 2.7 м</div>
+            </div>
+            <div class="port-pricing">
+              <div class="port-price-est">Стоимость: от 380 000 ₸</div>
+              <div class="port-kaspi-badge">
+                <span class="kaspi-tag">Kaspi 0-0-12</span>
+                <span class="kaspi-payment">от 31 660 ₸/мес</span>
+              </div>
+            </div>
+            <button class="btn-amber-pill btn-select-project" data-project="Встроенный шкаф Nordic Wood">
+              <span>Заказать расчет этого проекта</span>
+              <svg class="lucide-icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 5: Wardrobe Loft -->
+        <div class="portfolio-card" data-type="wardrobe" data-style="loft">
+          <div class="port-img-box">
+            <img src="https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=800&q=80" alt="Шкаф Metropolitan Loft" class="port-img">
+            <div class="port-badges">
+              <span class="port-badge-style">Лофт</span>
+              <span class="port-badge-type">Шкаф</span>
+            </div>
+          </div>
+          <div class="port-body">
+            <h3 class="port-title">Шкаф-купе «Metropolitan Loft»</h3>
+            <p class="port-desc">Узкорамочный черный алюминиевый профиль, тонированное графитовое стекло, встроенная теплая контурная подсветка полок.</p>
+            <div class="port-specs">
+              <div class="spec-line"><strong>Материалы:</strong> Алюминий Aristo Slim, стекло Графит</div>
+              <div class="spec-line"><strong>Наполнение:</strong> Брючницы, обувницы, LED 3000K</div>
+              <div class="spec-line"><strong>Размер:</strong> 2.8 x 2.6 м</div>
+            </div>
+            <div class="port-pricing">
+              <div class="port-price-est">Стоимость: от 450 000 ₸</div>
+              <div class="port-kaspi-badge">
+                <span class="kaspi-tag">Kaspi 0-0-12</span>
+                <span class="kaspi-payment">от 37 500 ₸/мес</span>
+              </div>
+            </div>
+            <button class="btn-amber-pill btn-select-project" data-project="Шкаф-купе Metropolitan Loft">
+              <span>Заказать расчет этого проекта</span>
+              <svg class="lucide-icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 6: Dressing Neoclassic -->
+        <div class="portfolio-card" data-type="dressing" data-style="neoclassic">
+          <div class="port-img-box">
+            <img src="https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=800&q=80" alt="Гардеробная Elegance Royale" class="port-img">
+            <div class="port-badges">
+              <span class="port-badge-style">Неоклассика</span>
+              <span class="port-badge-type">Гардеробная</span>
+            </div>
+          </div>
+          <div class="port-body">
+            <h3 class="port-title">Гардеробная «Elegance Royale»</h3>
+            <p class="port-desc">Просторная гардеробная комната оттенка айвори с островным комодом для украшений, зеркалами в багете и стеклянными витринами.</p>
+            <div class="port-specs">
+              <div class="spec-line"><strong>Материалы:</strong> МДФ эмаль, бархатная отделка лотков</div>
+              <div class="spec-line"><strong>Фурнитура:</strong> Blum с доводчиками, пантографы</div>
+              <div class="spec-line"><strong>Площадь:</strong> 7.5 кв. м</div>
+            </div>
+            <div class="port-pricing">
+              <div class="port-price-est">Стоимость: от 750 000 ₸</div>
+              <div class="port-kaspi-badge">
+                <span class="kaspi-tag">Kaspi 0-0-12</span>
+                <span class="kaspi-payment">от 62 500 ₸/мес</span>
+              </div>
+            </div>
+            <button class="btn-amber-pill btn-select-project" data-project="Гардеробная Elegance Royale">
+              <span>Заказать расчет этого проекта</span>
+              <svg class="lucide-icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 7: Kitchen Loft Concrete -->
+        <div class="portfolio-card" data-type="kitchen" data-style="loft">
+          <div class="port-img-box">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Кухня Industrial Concrete" class="port-img">
+            <div class="port-badges">
+              <span class="port-badge-style">Лофт</span>
+              <span class="port-badge-type">Кухня</span>
+            </div>
+          </div>
+          <div class="port-body">
+            <h3 class="port-title">Кухня «Industrial Concrete»</h3>
+            <p class="port-desc">Фактурные фасады под светлый бетон, навесные открытые металлические стеллажи и встроенная бесшовная подсветка.</p>
+            <div class="port-specs">
+              <div class="spec-line"><strong>Материалы:</strong> Пластик HPL Бетон Чикаго, Кварц</div>
+              <div class="spec-line"><strong>Фурнитура:</strong> Выдвижные корзины Kessebohmer</div>
+              <div class="spec-line"><strong>Размер:</strong> 3.2 пог. м</div>
+            </div>
+            <div class="port-pricing">
+              <div class="port-price-est">Стоимость: от 640 000 ₸</div>
+              <div class="port-kaspi-badge">
+                <span class="kaspi-tag">Kaspi 0-0-12</span>
+                <span class="kaspi-payment">от 53 330 ₸/мес</span>
+              </div>
+            </div>
+            <button class="btn-amber-pill btn-select-project" data-project="Кухня Industrial Concrete">
+              <span>Заказать расчет этого проекта</span>
+              <svg class="lucide-icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 8: Dressing Minimalism -->
+        <div class="portfolio-card" data-type="dressing" data-style="minimalism">
+          <div class="port-img-box">
+            <img src="https://images.unsplash.com/photo-1558997519-83ea9252def8?auto=format&fit=crop&w=800&q=80" alt="Гардеробная Linear Minimal" class="port-img">
+            <div class="port-badges">
+              <span class="port-badge-style">Минимализм</span>
+              <span class="port-badge-type">Гардеробная</span>
+            </div>
+          </div>
+          <div class="port-body">
+            <h3 class="port-title">Гардеробная «Linear Minimal»</h3>
+            <p class="port-desc">Строгая лаконичная геометрия полок, скрытые алюминиевые стойки, автоматическое включение мягкого света при открытии дверей.</p>
+            <div class="port-specs">
+              <div class="spec-line"><strong>Материалы:</strong> Egger Кашемир Серый, Алюминий</div>
+              <div class="spec-line"><strong>Фурнитура:</strong> Blum Legrabox с магнитными замками</div>
+              <div class="spec-line"><strong>Площадь:</strong> 6.0 кв. м</div>
+            </div>
+            <div class="port-pricing">
+              <div class="port-price-est">Стоимость: от 520 000 ₸</div>
+              <div class="port-kaspi-badge">
+                <span class="kaspi-tag">Kaspi 0-0-12</span>
+                <span class="kaspi-payment">от 43 330 ₸/мес</span>
+              </div>
+            </div>
+            <button class="btn-amber-pill btn-select-project" data-project="Гардеробная Linear Minimal">
+              <span>Заказать расчет этого проекта</span>
+              <svg class="lucide-icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+            </button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Booking & Map -->
+  <!-- Interactive Kaspi Installment Calculator Section -->
+  <section class="kaspi-section" id="kaspi">
+    <div class="container">
+      <div class="kaspi-wrapper">
+        <div class="kaspi-header-row">
+          <div class="kaspi-brand-box">
+            <span class="kaspi-logo-badge">Kaspi</span>
+            <span class="kaspi-promo-badge">Рассрочка 0-0-12</span>
+          </div>
+          <h2 class="kaspi-title">Калькулятор рассрочки на мебель</h2>
+          <p class="kaspi-subtitle">Рассчитайте ежемесячный платёж без первоначального взноса и без переплат. Оформление через приложение Kaspi за 2 минуты.</p>
+        </div>
+
+        <div class="kaspi-calc-grid">
+          <!-- Left: Controls -->
+          <div class="kaspi-controls">
+            <!-- Range Slider -->
+            <div class="calc-control-group">
+              <div class="calc-control-header">
+                <label class="calc-label" for="kaspiAmountRange">Ориентировочная стоимость мебели:</label>
+                <div class="calc-amount-display" id="kaspiAmountDisplay">680 000 ₸</div>
+              </div>
+              <input type="range" id="kaspiAmountRange" class="calc-range-slider" min="200000" max="3000000" step="50000" value="680000">
+              <div class="calc-range-bounds">
+                <span>200 000 ₸</span>
+                <span>1 500 000 ₸</span>
+                <span>3 000 000 ₸</span>
+              </div>
+            </div>
+
+            <!-- Month Terms Selector -->
+            <div class="calc-control-group">
+              <label class="calc-label">Срок рассрочки или кредита:</label>
+              <div class="kaspi-terms-row" id="kaspiTerms">
+                <button type="button" class="term-btn" data-months="3">3 месяца</button>
+                <button type="button" class="term-btn" data-months="6">6 месяцев</button>
+                <button type="button" class="term-btn active" data-months="12">
+                  <span class="term-star-tag">0-0-12</span>
+                  <span>12 месяцев</span>
+                </button>
+                <button type="button" class="term-btn" data-months="24">24 месяца</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Summary Card -->
+          <div class="kaspi-summary-box">
+            <div class="summary-line-sub">Ежемесячный платёж:</div>
+            <div class="summary-payment-large" id="kaspiMonthlyPayment">56 667 ₸ / мес</div>
+
+            <div class="summary-details-list">
+              <div class="summary-row">
+                <span>Первый взнос:</span>
+                <strong>0 ₸ (без предоплаты)</strong>
+              </div>
+              <div class="summary-row">
+                <span>Переплата по рассрочке:</span>
+                <strong class="text-green">0 ₸ (честная рассрочка)</strong>
+              </div>
+              <div class="summary-row">
+                <span>Выбранный срок:</span>
+                <strong id="kaspiSelectedTermText">12 месяцев (0-0-12)</strong>
+              </div>
+              <div class="summary-row">
+                <span>Общая сумма проекта:</span>
+                <strong id="kaspiTotalSummary">680 000 ₸</strong>
+              </div>
+            </div>
+
+            <button type="button" class="btn-amber-pill btn-apply-kaspi" id="applyKaspiBtn">
+              <span>Зафиксировать расчет и заказать 3D-проект</span>
+              <svg class="lucide-icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking & Map Section -->
   <section class="booking-section" id="booking">
     <div class="container">
       <div class="booking-grid">
-        <div class="form-box">
-          <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 8px;">Бесплатный дизайн-проект</h2>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Дизайнер приедет с образцами материалов и составит 3D-визуализацию.</p>
+        <div class="form-box" id="formBox">
+          <div class="form-badge">Бесплатно</div>
+          <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 8px;">Бесплатный 3D дизайн-проект</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">Дизайнер приедет с образцами материалов и составит 3D-визуализацию с точной сметой.</p>
 
           <form id="mebelForm">
             <div class="form-group">
               <label class="form-label" for="clientName">Ваше имя *</label>
-              <input type="text" id="clientName" class="form-control" placeholder="Имя" required>
+              <input type="text" id="clientName" class="form-control" placeholder="Как к вам обращаться" required>
             </div>
             <div class="form-group">
               <label class="form-label" for="clientPhone">Телефон *</label>
@@ -175,14 +493,19 @@
               <label class="form-label" for="mebelType">Что вас интересует?</label>
               <select id="mebelType" class="form-control">
                 <option value="Кухонный гарнитур">Кухонный гарнитур</option>
-                <option value="Шкаф-купе">Шкаф-купе в нишу</option>
-                <option value="Гардеробная">Гардеробная комната</option>
+                <option value="Шкаф-купе в нишу">Шкаф-купе в нишу</option>
+                <option value="Гардеробная комната">Гардеробная комната</option>
                 <option value="Мебель в прихожую">Прихожая / ТВ-зона</option>
+                <option value="Комплексная меблировка">Комплексная меблировка квартиры</option>
               </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="clientComment">Пожелания или выбранный проект</label>
+              <input type="text" id="clientComment" class="form-control" placeholder="Например: расчет в рассрочку Kaspi, стиль лофт">
             </div>
 
             <button type="submit" class="btn-amber-pill" style="width: 100%; justify-content: center; margin-top: 8px;">
-              <span>Отправить заявку</span>
+              <span>Отправить заявку на 3D-проект</span>
               <svg class="lucide-icon" viewBox="0 0 24 24"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
             </button>
             <div id="mebelAlert" style="display:none; margin-top:16px; padding:12px; background:#fef3c7; border:1px solid #f59e0b; color:#78350f; border-radius:8px; font-size:0.9rem;"></div>
@@ -213,8 +536,8 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
-      <div>© 2026 GOOD MEBEL. Усть-Каменогорск. Все права защищены.</div>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+      <div>© 2026 GOOD MEBEL. Усть-Каменогорск, ул. Бажова, 99/1. Все права защищены.</div>
       <div>Дизайн по мотивам референса с Dribbble «APJ Furniture». Без эмодзи.</div>
     </div>
   </footer>
